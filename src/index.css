@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-brand-blue: #1E5B9C;
+    --color-brand-orange: #F47A1F;
+    --color-brand-magenta: #C2185B;
+    --color-neutral-white: #FFFFFF;
+    --color-neutral-bg: #F6F7F9;
+    --color-neutral-border: #E5E7EB;
+    --color-text-primary: #1F2933;
+    --color-text-secondary: #4B5563;
+    --color-text-muted: #6B7280;
+  }
+
+  body {
+    @apply text-neutral-800;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-neutral-800;
+  }
+
+  a {
+    @apply text-brand-blue;
+    transition: color 0.2s ease;
+  }
+
+  a:hover {
+    @apply text-brand-orange;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-white text-brand-blue px-6 py-3 rounded-md font-semibold;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .btn-primary:hover {
+    @apply bg-brand-blue text-white;
+  }
+
+  .btn-secondary {
+    @apply bg-white text-brand-blue border-2 border-brand-blue px-6 py-3 rounded-md font-semibold transition-colors duration-200;
+  }
+
+  .btn-secondary:hover {
+    @apply bg-brand-blue text-white;
+  }
+
+  .hero-section {
+    @apply bg-brand-blue text-white py-20;
+  }
+
+  .hero-section h1,
+  .hero-section h2,
+  .hero-section h3,
+  .hero-section h4,
+  .hero-section h5,
+  .hero-section h6,
+  .hero-section p {
+    color: #FFFFFF !important;
+  }
+
+  .bg-brand-blue h1,
+  .bg-brand-blue h2,
+  .bg-brand-blue h3,
+  .bg-brand-blue h4,
+  .bg-brand-blue h5,
+  .bg-brand-blue h6,
+  .bg-brand-blue p {
+    color: #FFFFFF !important;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
